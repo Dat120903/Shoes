@@ -5,4 +5,9 @@
     @apply w-full max-w-[1410px] mx-auto px-4 sm:px-6 lg:px-10;
   }
 }
+html, body, #root {
+  height: auto !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
 

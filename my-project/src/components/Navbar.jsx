@@ -9,132 +9,81 @@ import {
   RiYoutubeFill,
 } from "react-icons/ri";
 
-
 const navLinks = [
-  { label: "HÀNG MỚI", href: "/hang-moi" },
+  { label: "HÀNG MỚI", href: "/comingsoon" },
   { label: "SẢN PHẨM", href: "/shoplist" },
   { label: "COLLECTION", href: "/collection" },
-  { label: "SALE", href: "/sale", red: true },
+  { label: "SALE", href: "/comingsoon", red: true },
   { label: "HỆ THỐNG SHOWROOM", href: "/showroom" },
 ];
 
 const mobileMenuLinks = [
   { label: "SẢN PHẨM", href: "/shoplist" },
   { label: "COLLECTION", href: "/collection" },
-  { label: "SALE", href: "/sale", red: true },
+  { label: "SALE", href: "/comingsoon", red: true },
   { label: "GIỚI THIỆU", href: "/about" },
   { label: "HỆ THỐNG ĐẠI LÝ", href: "/showroom" },
-  { label: "HỖ TRỢ", href: "/support" },
+  { label: "HỖ TRỢ", href: "/comingsoon" },
   { label: "TIN TỨC", href: "/news" },
   { label: "LIÊN HỆ", href: "/contact" },
-  { label: "#EVASHOES", href: "/hashtag" },
-  
+  { label: "#EVASHOES", href: "/comingsoon" },
 ];
 
-// PHẦN DỮ LIỆU CHI TIẾT CHO PHẦN VÀNG
-
+// Dữ liệu chi tiết panel vàng
 const submenuData = {
   "SẢN PHẨM": {
     sections: [
-      {
-        title: "DÒNG SẢN PHẨM",
-        items: ["Giày cao gót", "Giày thể thao", "Giày búp bê", "Sandal", "Dép"],
-      },
-      {
-        title: "BỘ SƯU TẬP",
-        items: ["Xuân Hè", "Thu Đông", "Limited Edition"],
-      },
+      { title: "DÒNG SẢN PHẨM", items: ["Giày cao gót", "Giày thể thao", "Giày búp bê", "Sandal", "Dép"] },
+      { title: "BỘ SƯU TẬP", items: ["Xuân Hè", "Thu Đông", "Limited Edition"] },
     ],
   },
   COLLECTION: {
     sections: [
-      {
-        title: "BST NỔI BẬT",
-        items: ["New Season", "Pastel Palette", "Evashoes Signature"],
-      },
+      { title: "BST NỔI BẬT", items: ["New Season", "Pastel Palette", "Evashoes Signature"] },
     ],
   },
   SALE: {
     sections: [
-      {
-        title: "KHUYẾN MÃI HOT",
-        items: ["Giảm 50%", "Mua 1 tặng 1", "Flash Sale cuối tuần"],
-      },
-      {
-        title: "ƯU ĐÃI KHÁC",
-        items: ["Voucher sinh nhật", "Thành viên VIP", "Tặng quà đặc biệt"],
-      },
+      { title: "KHUYẾN MÃI HOT", items: ["Giảm 50%", "Mua 1 tặng 1", "Flash Sale cuối tuần"] },
+      { title: "ƯU ĐÃI KHÁC", items: ["Voucher sinh nhật", "Thành viên VIP", "Tặng quà đặc biệt"] },
     ],
   },
   "GIỚI THIỆU": {
     sections: [
-      {
-        title: "TỔNG QUAN",
-        items: ["Giới thiệu chung", "Lịch sử hình thành", "Tầm nhìn - Sứ mệnh"],
-      },
-      {
-        title: "VĂN HÓA DOANH NGHIỆP",
-        items: ["Giá trị cốt lõi", "Danh hiệu & Giải thưởng"],
-      },
+      { title: "TỔNG QUAN", items: ["Giới thiệu chung", "Lịch sử hình thành", "Tầm nhìn - Sứ mệnh"] },
+      { title: "VĂN HÓA DOANH NGHIỆP", items: ["Giá trị cốt lõi", "Danh hiệu & Giải thưởng"] },
     ],
   },
   "HỆ THỐNG ĐẠI LÝ": {
     sections: [
-      {
-        title: "SHOWROOM",
-        items: ["Hà Nội", "TP.HCM", "Đà Nẵng", "Cần Thơ"],
-      },
-      {
-        title: "ĐẠI LÝ",
-        items: ["Miền Bắc", "Miền Trung", "Miền Nam"],
-      },
+      { title: "SHOWROOM", items: ["Hà Nội", "TP.HCM", "Đà Nẵng", "Cần Thơ"] },
+      { title: "ĐẠI LÝ", items: ["Miền Bắc", "Miền Trung", "Miền Nam"] },
     ],
   },
   "HỖ TRỢ": {
     sections: [
-      {
-        title: "DỊCH VỤ KHÁCH HÀNG",
-        items: ["Chính sách đổi trả", "Bảo hành sản phẩm", "Hướng dẫn mua hàng"],
-      },
-      {
-        title: "CHÍNH SÁCH KHÁC",
-        items: ["Bảo mật thông tin", "Chính sách khách hàng thân thiết"],
-      },
+      { title: "DỊCH VỤ KHÁCH HÀNG", items: ["Chính sách đổi trả", "Bảo hành sản phẩm", "Hướng dẫn mua hàng"] },
+      { title: "CHÍNH SÁCH KHÁC", items: ["Bảo mật thông tin", "Chính sách khách hàng thân thiết"] },
     ],
   },
   "TIN TỨC": {
     sections: [
-      {
-        title: "BẢN TIN MỚI",
-        items: ["Xu hướng thời trang", "Sự kiện Evashoes", "Bí quyết chăm sóc giày"],
-      },
+      { title: "BẢN TIN MỚI", items: ["Xu hướng thời trang", "Sự kiện Evashoes", "Bí quyết chăm sóc giày"] },
     ],
   },
   "LIÊN HỆ": {
     sections: [
       {
         title: "THÔNG TIN LIÊN HỆ",
-        items: [
-          "Hotline: 1900 636 025",
-          "Email: cskh@evashoes.vn",
-          "Fanpage: Evashoes Official",
-        ],
+        items: ["Hotline: 1900 636 025", "Email: cskh@evashoes.vn", "Fanpage: Evashoes Official"],
       },
     ],
   },
   "#EVASHOES": {
-    sections: [
-      {
-        title: "CỘNG ĐỒNG EVASHOES",
-        items: ["Lookbook", "Mix & Match", "Feedback khách hàng"],
-      },
-    ],
+    sections: [{ title: "CỘNG ĐỒNG EVASHOES", items: ["Lookbook", "Mix & Match", "Feedback khách hàng"] }],
   },
 };
 
-// ==============================
-// MAIN COMPONENT
-// ==============================
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -206,15 +155,10 @@ export default function Navbar() {
               Bạn đang quan tâm tới sản phẩm hay dịch vụ của Evashoes?
             </p>
             <div className="flex items-center border-b border-gray-300 pb-2">
-              <input
-                type="text"
-                placeholder="Tìm kiếm ngay"
-                className="flex-1 text-[15px] outline-none"
-              />
+              <input type="text" placeholder="Tìm kiếm ngay" className="flex-1 text-[15px] outline-none" />
               <Search className="w-5 h-5 text-gray-500" />
             </div>
 
-            {/* Gợi ý nhanh */}
             <div className="mt-6">
               <p className="uppercase text-[13px] text-gray-500 mb-2">Gợi ý nhanh</p>
               <ul className="space-y-2 text-[15px]">
@@ -229,7 +173,7 @@ export default function Navbar() {
         </div>
       )}
 
-      {/* MENU OVERLAY (đã responsive) */}
+      {/* MENU OVERLAY */}
       {menuOpen && (
         <div className="fixed inset-0 z-[10000] bg-black/40 flex justify-end">
           <aside
@@ -237,7 +181,7 @@ export default function Navbar() {
               isDesktop ? "w-[585px]" : "w-full"
             }`}
           >
-            {/* Nút X duy nhất */}
+            {/* Nút đóng */}
             <button
               aria-label="Đóng"
               onClick={() => { setMenuOpen(false); setActiveMenu(null); }}
@@ -253,15 +197,17 @@ export default function Navbar() {
                 <div className="w-[276px] bg-white h-full px-8 pt-14 pb-8 flex flex-col justify-between">
                   <div className="space-y-4">
                     {mobileMenuLinks.map((link) => (
-                      <p
+                      <Link
                         key={link.label}
+                        to={link.href}
+                        onClick={() => setMenuOpen(false)}
                         onMouseEnter={() => setActiveMenu(link.label)}
-                        className={`font-semibold text-[16px] cursor-pointer ${
+                        className={`block font-semibold text-[16px] ${
                           link.red ? "text-red-600" : "text-black hover:text-[#206973]"
                         }`}
                       >
                         {link.label}
-                      </p>
+                      </Link>
                     ))}
                   </div>
                   <div className="flex gap-6 text-xl text-gray-700 mt-10">
@@ -301,7 +247,7 @@ export default function Navbar() {
                 </div>
               </div>
             ) : (
-              // Mobile
+              // Mobile menu
               <div className="h-full bg-white">
                 {activeMenu && submenuData[activeMenu] ? (
                   <div className="h-full bg-[#f4c400] text-black overflow-y-auto px-6 pt-14 pb-10">
@@ -318,15 +264,11 @@ export default function Navbar() {
                         </h3>
                         <ul className="space-y-2">
                           {section.items.map((item, idx) => (
-                          <li
-                            key={idx}
-                            className="font-semibold text-[15px] hover:underline cursor-pointer"
-                          >
-                            {item}
-                          </li>
-                        ))}
-                      </ul>                   
-
+                            <li key={idx} className="font-semibold text-[15px] hover:underline cursor-pointer">
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     ))}
                   </div>
@@ -334,15 +276,16 @@ export default function Navbar() {
                   <div className="h-full px-8 pt-14 pb-8 flex flex-col justify-between">
                     <div className="space-y-4">
                       {mobileMenuLinks.map((link) => (
-                        <p
+                        <Link
                           key={link.label}
-                          onClick={() => submenuData[link.label] && setActiveMenu(link.label)}
-                          className={`font-semibold text-[16px] cursor-pointer ${
+                          to={link.href}
+                          onClick={() => setMenuOpen(false)}
+                          className={`block font-semibold text-[16px] ${
                             link.red ? "text-red-600" : "text-black hover:text-[#206973]"
                           }`}
                         >
                           {link.label}
-                        </p>
+                        </Link>
                       ))}
                     </div>
                     <div className="flex gap-6 text-xl text-gray-700 mt-10">

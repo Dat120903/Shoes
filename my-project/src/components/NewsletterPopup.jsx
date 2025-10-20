@@ -14,10 +14,8 @@ const NewsletterPopup = () => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/40 z-[99999] isolate">
       {/* Popup chính */}
-      <div
-        className="relative flex flex-col md:flex-row bg-white rounded-md overflow-hidden shadow-xl w-[880px] h-[480px] max-w-[95vw] mt-[100px] md:mt-[80px]"
-      >
-        {/* Nút đóng (sát góc phải thật) */}
+      <div className="relative flex flex-col md:flex-row bg-white rounded-md overflow-hidden shadow-xl w-[880px] h-[480px] max-w-[95vw] mt-[100px] md:mt-[80px]">
+        {/* Nút đóng */}
         <button
           onClick={() => setIsOpen(false)}
           className="absolute top-3 right-4 text-[22px] text-gray-700 hover:text-black z-[50]"
@@ -30,7 +28,7 @@ const NewsletterPopup = () => {
           <img
             src={imgPoPup}
             alt="Newsletter"
-            className="w-full h-full object-cover block"
+            className="w-full h-full object-cover md:object-center object-[center_30%] block"
           />
         </div>
 
@@ -44,7 +42,7 @@ const NewsletterPopup = () => {
             Be the first to get the latest news about trends, promotions, and much more!
           </p>
 
-          {/* Form gọn lại 50% khối */}
+          {/* Form */}
           <form
             onSubmit={(e) => e.preventDefault()}
             className="flex border border-[#e5e5e5] w-[50%] min-w-[220px]"

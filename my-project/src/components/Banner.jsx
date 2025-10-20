@@ -9,9 +9,9 @@ const Banner = () => {
         {/* Hai ảnh song song */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* === LEFT === */}
-          <div className="relative w-full overflow-hidden">
+          <div className="relative w-full">
             {/* ⚙️ Tỷ lệ chính xác 690x398 */}
-            <div className="w-full aspect-[690/398]">
+            <div className="w-full aspect-[690/398] overflow-hidden rounded-md">
               <img
                 src={imgLC}
                 alt="Lalasale Collection"
@@ -37,8 +37,8 @@ const Banner = () => {
           </div>
 
           {/* === RIGHT === */}
-          <div className="relative w-full overflow-hidden">
-            <div className="w-full aspect-[690/398]">
+          <div className="relative w-full">
+            <div className="w-full aspect-[690/398] overflow-hidden rounded-md">
               <img
                 src={imgSS}
                 alt="Summer Sandal"
@@ -67,4 +67,3 @@ const Banner = () => {
 };
 
 export default Banner;
-

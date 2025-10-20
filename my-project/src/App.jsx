@@ -35,13 +35,10 @@ import NewsletterPopup from "./components/NewsletterPopup";
 const App = () => {
   return (
     <Router>
-      {/* Tự động scroll về đầu mỗi khi đổi route */}
       <ScrollToTop />
 
-      {/* Navbar luôn hiển thị */}
       <Navbar />
 
-      {/* Phần nội dung trang */}
       <Routes>
         {/* Trang chủ */}
         <Route
@@ -50,7 +47,6 @@ const App = () => {
             <main className="pt-[100px]">
               <Slider />
               <Paner />
-              <NewsletterPopup /> 
               <TrendProduct />
               <DealWeeks />
               <Banner />
@@ -80,6 +76,8 @@ const App = () => {
       <DealerSection />
       <Footer />
       <Footerlate />
+
+      <NewsletterPopup /> 
     </Router>
   );
 };
