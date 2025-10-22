@@ -47,21 +47,20 @@ const News = () => {
         ))}
       </div>
 
-      {/* Danh sách bài viết */}
+    
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
         {newsList.map((item, index) => (
           <NewsItem key={index} {...item} />
         ))}
       </div>
 
-      {/* Xem thêm */}
+   
       <div className="text-center mt-25">
         <button className="text-[15px] font-medium uppercase underline underline-offset-8 decoration-[1.5px]">
           Xem thêm tin tức
         </button>
       </div>
 
-      {/* Tiếp tục mua sắm */}
       <div className="bg-gray-50 py-16 mt-16 text-center">
         <h2 className="text-[30px] font-semibold mb-8">Tiếp tục mua sắm</h2>
         <div className="flex justify-center gap-6">

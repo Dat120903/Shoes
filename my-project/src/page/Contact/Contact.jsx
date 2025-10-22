@@ -15,7 +15,7 @@ const Contact = () => {
         </h1>
       </div>
 
-      {/* --- Ảnh bản đồ + marker --- */}
+
       <div className="relative w-full overflow-hidden">
         <img
           src={mapImg}
@@ -23,18 +23,15 @@ const Contact = () => {
           className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover"
         />
 
-        {/* Các vị trí đánh dấu */}
-        {/* Marker 1 */}
+
         <div className="absolute top-[28%] left-[18%] text-red-700 text-[30px] sm:text-[40px] lg:text-[50px] drop-shadow-md">
           <FaMapMarkerAlt />
         </div>
 
-        {/* Marker 2 */}
         <div className="absolute top-[62%] left-[46%] text-red-700 text-[30px] sm:text-[40px] lg:text-[50px] drop-shadow-md">
           <FaMapMarkerAlt />
         </div>
 
-        {/* Marker 3 */}
         <div className="absolute top-[25%] right-[18%] text-red-700 text-[30px] sm:text-[40px] lg:text-[50px] drop-shadow-md">
           <FaMapMarkerAlt />
         </div>
@@ -42,16 +39,13 @@ const Contact = () => {
 
       {/* --- Phần nội dung chính --- */}
       <div className="max-w-[1410px] mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-20">
-        {/* --- 2 cột: Tên công ty & thông tin --- */}
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-5 sm:gap-8 gap-10 mb-16 md:items-start">
-          {/* Bên trái: Tên công ty */}
           <div className="text-center md:text-left flex items-start justify-center md:justify-start md:pl-[100px] lg:pl-[270px]">
             <h2 className="text-[18px] sm:text-[20px] lg:text-[24px] font-semibold leading-[32px]">
               Công ty Cổ phần <br /> Thời trang Evashoes
             </h2>
           </div>
 
-          {/* Bên phải: Thông tin chi tiết */}
           <div className="text-[14px] sm:text-[15px] leading-[26px] sm:leading-[28px] text-[#222] space-y-2 sm:space-y-3 text-center md:text-left">
             <h1 className="text-[26px] sm:text-[32px] font-bold uppercase mb-2 md:hidden">
               Liên hệ
@@ -75,14 +69,12 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* --- Form liên hệ --- */}
         <div className="max-w-[800px] mx-auto w-full mt-10 px-2 sm:px-0">
           <h3 className="text-[22px] sm:text-[24px] font-semibold mb-5 uppercase text-left">
             Liên hệ với chúng tôi
           </h3>
 
           <form className="space-y-5">
-            {/* Họ và tên */}
             <div>
               <label className="block text-sm font-medium mb-1">
                 Họ và tên <span className="text-red-500">*</span>
@@ -94,7 +86,6 @@ const Contact = () => {
               />
             </div>
 
-            {/* Số điện thoại & Email */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium mb-1">
@@ -118,7 +109,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Nội dung */}
             <div>
               <label className="block text-sm font-medium mb-1">
                 Nội dung liên hệ hoặc cần tư vấn
@@ -130,7 +120,6 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            {/* Nút gửi */}
             <div className="text-left">
               <button
                 type="submit"

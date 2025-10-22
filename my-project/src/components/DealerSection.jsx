@@ -4,7 +4,7 @@ export default function DealerSection() {
   return (
     <section className="w-full bg-[#F4C400] mt-14">
       <div className="main-container relative">
-        {/* kẻ dọc (ẩn khi nhỏ) */}
+
         <span className="hidden md:block absolute left-1/3 top-1/2 -translate-y-1/2 w-[2px] h-[44px] bg-black/90" />
         <span className="hidden md:block absolute left-2/3 top-1/2 -translate-y-1/2 w-[1.5px] h-[44px] bg-black/90" />
 

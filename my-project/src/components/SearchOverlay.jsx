@@ -7,14 +7,13 @@ const SearchOverlay = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 bg-white z-50 overflow-auto">
       <div className="max-w-[1200px] mx-auto px-6 py-8">
-        {/* Đóng */}
+       
         <div className="flex justify-end">
           <button onClick={onClose}>
             <X size={28} className="text-gray-600 hover:text-black" />
           </button>
         </div>
 
-        {/* Nội dung */}
         <div className="mt-4">
           <p className="text-[13px] uppercase text-gray-500 mb-2">
             Bạn đang quan tâm tới sản phẩm hay dịch vụ của EVASHOES?

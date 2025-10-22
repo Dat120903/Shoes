@@ -20,7 +20,7 @@ export default function Footer() {
           gap-y-12 md:gap-x-8
         "
       >
-        {/* === 1. CỘT HOTLINE === */}
+        {/* === CỘT HOTLINE === */}
         <div className="space-y-6">
           <div>
             <p className="text-gray-300 mb-1 text-[14px]">Gọi mua hàng online:</p>
@@ -52,7 +52,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* === 2. CỘT EVASHOES === */}
+        {/* === CỘT EVASHOES === */}
         <div>
           <h4 className="font-semibold text-lg mb-6 uppercase">EVASHOES</h4>
           <ul className="space-y-4 text-gray-300 text-[15px]">
@@ -75,7 +75,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* === 3. CỘT SHOP === */}
+        {/* === CỘT SHOP === */}
         <div>
           <h4 className="font-semibold text-lg mb-6 uppercase">SHOP</h4>
           <ul className="space-y-4 text-gray-300 text-[15px]">
@@ -87,7 +87,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* === 4. CỘT HỖ TRỢ === */}
+        {/* === CỘT HỖ TRỢ === */}
         <div>
           <h4 className="font-semibold text-lg mb-6 uppercase">HỖ TRỢ</h4>
           <ul className="space-y-4 text-gray-300 text-[15px]">
@@ -99,7 +99,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* === 5. CỘT ĐĂNG KÝ === */}
+        {/* === CỘT ĐĂNG KÝ === */}
         <div>
           <h4 className="uppercase font-semibold text-[20px] mb-6 tracking-wide">ĐĂNG KÝ</h4>
 

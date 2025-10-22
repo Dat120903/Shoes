@@ -13,9 +13,8 @@ const NewsletterPopup = () => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/40 z-[99999] isolate">
-      {/* Popup chính */}
       <div className="relative flex flex-col md:flex-row bg-white rounded-md overflow-hidden shadow-xl w-[880px] h-[480px] max-w-[95vw] mt-[100px] md:mt-[80px]">
-        {/* Nút đóng */}
+     
         <button
           onClick={() => setIsOpen(false)}
           className="absolute top-3 right-4 text-[22px] text-gray-700 hover:text-black z-[50]"
@@ -23,7 +22,6 @@ const NewsletterPopup = () => {
           ✕
         </button>
 
-        {/* Ảnh bên trái */}
         <div className="w-full md:w-1/2 h-[260px] md:h-full overflow-hidden">
           <img
             src={imgPoPup}
@@ -32,7 +30,6 @@ const NewsletterPopup = () => {
           />
         </div>
 
-        {/* Nội dung bên phải */}
         <div className="w-full md:w-1/2 flex flex-col justify-center px-8 sm:px-10 lg:px-12 bg-white">
           <h2 className="text-[24px] font-semibold mb-4 leading-snug text-[#111]">
             Sign Up to Our Newsletter
@@ -43,19 +40,19 @@ const NewsletterPopup = () => {
           </p>
 
           {/* Form */}
-          <form
+         <form
             onSubmit={(e) => e.preventDefault()}
-            className="flex border border-[#e5e5e5] w-[50%] min-w-[220px]"
+            className="flex items-center justify-between border border-[#d9d9d9] w-full max-w-[360px] h-[52px]"
           >
             <input
               type="email"
               placeholder="Your email address"
-              className="flex-grow px-6 py-3 text-[14px] outline-none placeholder:text-gray-400"
+              className="flex-1 px-4 text-[14px] text-[#111] placeholder:text-[#999] outline-none"
               required
             />
             <button
               type="submit"
-              className="px-6 py-3 text-[14px] font-semibold text-black hover:bg-gray-200 transition-colors"
+              className="px-5 text-[14px] font-semibold text-[#111] hover:opacity-70 transition-all"
             >
               JOIN
             </button>

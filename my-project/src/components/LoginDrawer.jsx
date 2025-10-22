@@ -13,7 +13,6 @@ export default function LoginDrawer({ isOpen, onClose }) {
         />
       )}
 
-      {/* Panel chính */}
       <div
         className={`fixed top-0 right-0 h-full w-[420px] max-w-full bg-white shadow-lg z-[10001] transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"

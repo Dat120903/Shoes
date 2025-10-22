@@ -2,7 +2,6 @@ import React from "react";
 import PageCover from "./PageCover";
 import ShopFilter from "./ShopFilter";
 import Content from "./Content";
-// ...ProductGrid, Pagination
 
 export default function ShopList() {
   return (
@@ -12,7 +11,6 @@ export default function ShopList() {
       <div className="mb-[120px] sm:mb-[180px] lg:mb-[270px]">
         <Content />
       </div>
-      {/* ProductGrid, Pagination... */}
     </main>
   );
 }

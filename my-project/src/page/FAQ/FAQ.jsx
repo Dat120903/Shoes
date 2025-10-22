@@ -5,7 +5,6 @@ const FAQSection = ({ title, questions }) => {
 
   return (
     <div className="mb-12">
-      {/* Tiêu đề mục (Orders, Shipping, Payment) */}
       <h2 className="text-[24px] sm:text-[26px] font-semibold mb-4">{title}</h2>
 
       <div className="border-t border-gray-300">
@@ -27,7 +26,6 @@ const FAQSection = ({ title, questions }) => {
               </span>
             </button>
 
-            {/* Nội dung câu trả lời */}
             {openIndex === index && (
               <div className="pb-6 text-[15px] text-gray-900 leading-relaxed">
                 {q.answer}
@@ -97,12 +95,10 @@ const FAQ = () => {
 
   return (
     <section className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8 mt-[140px] mb-[100px]">
-      {/* --- Tiêu đề chính --- */}
       <h1 className="text-[28px] sm:text-[34px] lg:text-[38px] font-bold uppercase mb-12 text-left leading-[110%]">
         Frequently Asked Questions
       </h1>
 
-      {/* --- Các phần FAQ --- */}
       <FAQSection title="Orders" questions={orders} />
       <FAQSection title="Shipping" questions={shipping} />
       <FAQSection title="Payment" questions={payment} />

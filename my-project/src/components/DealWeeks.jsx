@@ -9,7 +9,7 @@ export default function DealWeeks() {
           <div className="grid grid-cols-2 w-full h-full">
             {/* --- CỘT VÀNG --- */}
             <div className="bg-[#F4C400] flex flex-col justify-between">
-              {/* Nội dung trên */}
+          
               <div className="w-full max-w-[1410px] mx-auto px-6 lg:px-10 xl:px-16 pt-10 lg:pt-14">
                 <p className="uppercase text-[13px] lg:text-[14px] font-medium leading-[20px]">
                   Giảm giá trong tuần
@@ -52,7 +52,6 @@ export default function DealWeeks() {
               </div>
             </div>
 
-            {/* --- CỘT ẢNH --- */}
             <div className="relative w-full h-full">
               <img
                 src={imgDOW}
@@ -66,7 +65,7 @@ export default function DealWeeks() {
 
       {/* --- MOBILE / TABLET --- */}
       <div className="md:hidden grid grid-cols-1 gap-4">
-        {/* Cột vàng */}
+
         <div className="bg-[#F4C400] p-6 flex flex-col justify-between">
           <div>
             <p className="uppercase text-[12px] leading-[18px] font-medium">
@@ -81,7 +80,6 @@ export default function DealWeeks() {
             </button>
           </div>
 
-          {/* Bộ đếm thời gian */}
           <div className="mt-6 flex items-center gap-5">
             {[
               { n: "05", t: "NGÀY" },
@@ -106,7 +104,6 @@ export default function DealWeeks() {
           </div>
         </div>
 
-        {/* Cột ảnh */}
         <div className="w-full aspect-[16/10]">
           <img
             src={imgDOW}

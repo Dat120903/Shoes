@@ -4,7 +4,6 @@ import { Truck, Headphones, ShieldCheck } from "lucide-react";
 export default function ServiceSection() {
   return (
     <section className="mt-16">
-      {/* container giống Slider / DealWeeks: rộng hơn màn nhưng không full */}
       <div
         className="
           mx-auto w-full
@@ -16,7 +15,6 @@ export default function ServiceSection() {
         "
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-y-0 md:gap-x-10 text-center">
-          {/*  */}
           <div>
             <Truck className="mx-auto mb-5 text-black" size={56} strokeWidth={2} />
             <h3 className="font-semibold uppercase text-[18px] md:text-[20px]">
@@ -28,7 +26,6 @@ export default function ServiceSection() {
             </p>
           </div>
 
-          {/* 2 */}
           <div>
             <Headphones className="mx-auto mb-5 text-black" size={56} strokeWidth={2} />
             <h3 className="font-semibold uppercase text-[18px] md:text-[20px]">
@@ -40,7 +37,6 @@ export default function ServiceSection() {
             </p>
           </div>
 
-          {/* 3 */}
           <div>
             <ShieldCheck className="mx-auto mb-5 text-black" size={56} strokeWidth={2} />
             <h3 className="font-semibold uppercase text-[18px] md:text-[20px]">

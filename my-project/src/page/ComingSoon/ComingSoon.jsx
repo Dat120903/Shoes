@@ -8,7 +8,6 @@ const ComingSoon = () => {
     seconds: 3,
   });
 
-  // Countdown effect
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft((prev) => {
@@ -38,18 +37,15 @@ const ComingSoon = () => {
 
   return (
     <section className="flex flex-col items-center justify-center text-center min-h-[80vh] mt-[120px] px-4">
-      {/* COMING SOON title */}
       <h1 className="text-[60px] sm:text-[90px] font-extrabold text-black uppercase tracking-tight">
         Coming Soon
       </h1>
 
-      {/* Description */}
       <p className="max-w-[600px] text-gray-700 text-[15px] sm:text-[16px] mt-4 leading-relaxed">
         Sorry, we couldn’t find the page you were looking for. We suggest that
         you return to the home page.
       </p>
 
-      {/* Countdown Timer */}
       <div className="flex justify-center items-center gap-6 sm:gap-10 mt-10">
         {[
           { label: "DAYS", value: timeLeft.days },
@@ -68,7 +64,6 @@ const ComingSoon = () => {
         ))}
       </div>
 
-      {/* Email input */}
       <div className="flex flex-col sm:flex-row items-center justify-center mt-10 w-full max-w-[650px]">
         <input
           type="email"

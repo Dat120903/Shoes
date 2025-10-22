@@ -4,13 +4,10 @@ import imgSS from "../assets/imgSS.png";
 const Banner = () => {
   return (
     <section className="mt-20 w-full">
-      {/* Container chuẩn 1410px */}
       <div className="w-full max-w-[1410px] mx-auto px-4 sm:px-6 lg:px-10">
-        {/* Hai ảnh song song */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* === LEFT === */}
           <div className="relative w-full">
-            {/* ⚙️ Tỷ lệ chính xác 690x398 */}
             <div className="w-full aspect-[690/398] overflow-hidden rounded-md">
               <img
                 src={imgLC}
@@ -19,7 +16,6 @@ const Banner = () => {
               />
             </div>
 
-            {/* Overlay đỏ */}
             <div className="absolute inset-0 bg-[#D6001C]/75" />
 
             {/* Text */}

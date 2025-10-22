@@ -23,7 +23,7 @@ export default function Content() {
   const navigate = useNavigate();
 
   const toggleWishlist = (id, e) => {
-    e.stopPropagation(); // Ngăn click trái tim chuyển trang
+    e.stopPropagation(); 
     setWishlist((prev) =>
       prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
     );
@@ -42,7 +42,6 @@ export default function Content() {
             className="group cursor-pointer"
             onClick={() => handleProductClick(item.id)}
           >
-            {/* Ảnh sản phẩm */}
             <div className="relative w-full aspect-[330/400] overflow-hidden rounded-sm bg-gray-100">
               <img
                 src={item.image}
@@ -50,7 +49,6 @@ export default function Content() {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
 
-              {/* Tag SALE / NEW */}
               {item.discount && (
                 <span className="absolute top-3 right-3 bg-red-600 text-white text-[12px] font-semibold px-2 py-[2px] rounded">
                   {item.discount}
@@ -63,7 +61,6 @@ export default function Content() {
               )}
             </div>
 
-            {/* Dòng category + trái tim ngang hàng */}
             <div className="flex items-center justify-between mt-3">
               <p className="text-[13px] text-gray-500">{item.category}</p>
               <button
@@ -80,12 +77,10 @@ export default function Content() {
               </button>
             </div>
 
-            {/* Tên sản phẩm */}
             <p className="text-[15px] font-semibold text-black mt-1 leading-tight">
               {item.name}
             </p>
 
-            {/* Giá */}
             <div className="flex items-center gap-2 mt-1">
               {item.oldPrice && (
                 <span className="text-gray-400 line-through text-[14px]">

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Search } from "lucide-react";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import mapBanner from "../../assets/imgM.png"; // ảnh nền bản đồ toàn màn hình (1918x752)
+import mapBanner from "../../assets/imgM.png"; 
 
 const storesData = [
   {
@@ -78,12 +78,10 @@ const Showroom = () => {
 
   return (
     <section className="mt-[150px]">
-      {/* --- Tiêu đề chính --- */}
       <h1 className="text-[26px] sm:text-[32px] lg:text-[35px] font-bold uppercase leading-[100%] text-left pl-[20px] sm:pl-[100px] lg:pl-[300px] mb-12">
         Hệ thống showroom
       </h1>
 
-      {/* --- Banner bản đồ full màn hình --- */}
       <div className="relative w-full">
         <div className="aspect-[1918/752] w-full">
           <img
@@ -92,27 +90,21 @@ const Showroom = () => {
             className="w-full h-full object-cover"
           />
 
-          {/* --- 3 marker đỏ hiển thị trên bản đồ --- */}
-          {/* Marker 1 */}
           <div className="absolute top-[28%] left-[22%] text-red-600 text-[30px] drop-shadow-md">
             <FaMapMarkerAlt />
           </div>
 
-          {/* Marker 2 */}
           <div className="absolute top-[52%] left-[46%] text-red-600 text-[30px] drop-shadow-md">
             <FaMapMarkerAlt />
           </div>
 
-          {/* Marker 3 */}
           <div className="absolute top-[26%] right-[23%] text-red-600 text-[30px] drop-shadow-md">
             <FaMapMarkerAlt />
           </div>
         </div>
       </div>
 
-      {/* --- Nội dung khối 1050px căn giữa --- */}
       <div className="max-w-[1050px] mx-auto px-4 sm:px-6 lg:px-8 mt-[40px] mb-20">
-        {/* --- Giới thiệu --- */}
         <div className="text-left mb-10">
           <p className="text-gray-900 text-[26px] sm:text-[28px] leading-relaxed">
             Evashoes hiện có 72 cửa hàng trên toàn quốc.
@@ -121,7 +113,7 @@ const Showroom = () => {
           </p>
         </div>
 
-        {/* --- Bộ lọc --- */}
+     
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
           <select className="border border-gray-300 px-4 py-3 text-sm sm:text-base outline-none w-full">
             <option value="">Tỉnh / Thành Phố</option>
@@ -148,7 +140,6 @@ const Showroom = () => {
           </div>
         </div>
 
-        {/* --- Danh sách showroom --- */}
         <div className="space-y-6">
           {filteredStores.map((store) => (
             <div
@@ -177,7 +168,6 @@ const Showroom = () => {
           ))}
         </div>
 
-        {/* --- Nút xem thêm --- */}
         <div className="text-center mt-35 mb-[130px]">
           <button className="text-[14px] sm:text-[15px] font-semibold uppercase underline decoration-[2px] underline-offset-[6px] hover:text-gray-700 transition">
             Xem thêm

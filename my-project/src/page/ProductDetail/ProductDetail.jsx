@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-
-// === ẢNH GALLERY 8 TẤM ===
 import Img1 from "../../assets/imga1.png";
 import Img2 from "../../assets/imga2.png";
 import Img3 from "../../assets/imga3.png";
@@ -9,8 +7,6 @@ import Img5 from "../../assets/imga5.png";
 import Img6 from "../../assets/imga6.png";
 import Img7 from "../../assets/imga7.png";
 import Img8 from "../../assets/imga8.png";
-
-// === ẢNH GỢI Ý 4 TẤM ===
 import Rec1 from "../../assets/img1.png";
 import Rec2 from "../../assets/img1.png";
 import Rec3 from "../../assets/img1.png";
@@ -40,16 +36,16 @@ export default function ProductDetail() {
 
   return (
     <section className="max-w-[1410px] mx-auto px-4 sm:px-6 lg:px-8 mt-[200px] mb-[80px]">
-      {/* ====== KHỐI CHÍNH: TRÁI GALLERY – PHẢI THÔNG TIN ====== */}
+     
       <div className="grid grid-cols-1 lg:grid-cols-[62%_38%] gap-6 lg:gap-8">
-        {/* ===== GALLERY 8 ẢNH ===== */}
+    
         <div className="grid grid-cols-2 gap-4">
-          {/* 4 ảnh lớn trên (2×2) */}
+         
           <img src={Img1} alt="" className="w-full h-full object-cover" />
           <img src={Img2} alt="" className="w-full h-full object-cover" />
           <img src={Img3} alt="" className="w-full h-full object-cover" />
           <img src={Img4} alt="" className="w-full h-full object-cover" />
-          {/* 4 ảnh nhỏ dưới (1×4) */}
+         
           <div className="col-span-2 grid grid-cols-4 gap-4">
             <img src={Img5} alt="" className="w-full h-full object-cover" />
             <img src={Img6} alt="" className="w-full h-full object-cover" />
@@ -58,14 +54,11 @@ export default function ProductDetail() {
           </div>
         </div>
 
-        {/* ===== CỘT PHẢI: THÔNG TIN ===== */}
         <div className="pt-1">
-          {/* breadcrumb căn phải như hình */}
           <p className="text-[13px] text-[#000] font-bold uppercase mb-3 text-left">
             HOME / SẢN PHẨM / GIÀY DÉP
           </p>
 
-          {/* tiêu đề + giá */}
           <h1 className="text-[24px] sm:text-[28px] leading-[1.25] text-[#111] mt-[45px]">
             Dép cao gót quai kim tuyến sang trọng
           </h1>
@@ -78,14 +71,12 @@ export default function ProductDetail() {
             </span>
           </div>
 
-          {/* mô tả ngắn */}
           <p className="text-[15px] leading-[1.8] text-[#000] mb-6">
             Phasellus sed volutpat orci. Fusce eget lorem mauris vehicula elementum gravida nec dui.
             Aenean aliquam varius ipsum, non ultricies tellus sodales eu. Donec dignissim viverra
             nunc, ut aliquet magna posuere eget.
           </p>
 
-          {/* COLOR */}
           <div className="mb-4">
             <div className="uppercase text-[14px] font-semibold tracking-wide mb-2">COLOR</div>
             <div className="flex items-center gap-4">
@@ -112,7 +103,6 @@ export default function ProductDetail() {
             </div>
           </div>
 
-          {/* SIZES + link hướng dẫn ở bên phải có gạch dưới */}
           <div className="mb-6">
             <div className="flex items-center justify-between">
               <div className="uppercase text-[14px] font-semibold tracking-wide">SIZES</div>
@@ -140,7 +130,6 @@ export default function ProductDetail() {
             </div>
           </div>
 
-          {/* 2 NÚT */}
           <div className="flex flex-col gap-3 mb-8">
             <button className="h-[44px] bg-[#1f1f1f] text-white uppercase text-[14px] font-semibold hover:bg-[#101010] transition-colors">
               MUA NGAY
@@ -150,10 +139,8 @@ export default function ProductDetail() {
             </button>
           </div>
 
-          {/* FAVORITE + SHARE (gạch dưới ngắn như ảnh) */}
           <div className="flex items-center justify-between mb-8">
             <div className="text-[14px] font-medium uppercase text-[#111] relative after:content-[''] after:block after:h-[3px] after:w-[180px] after:bg-[#111] after:mt-[8px]">
-              {/* icon tim outline đơn giản */}
               <span className="inline-block align-middle mr-2">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.8">
                   <path d="M20.8 4.6a5.3 5.3 0 0 0-7.5 0L12 5.9l-1.3-1.3a5.3 5.3 0 0 0-7.5 7.5l8.8 8.8 8.8-8.8a5.3 5.3 0 0 0 0-7.5z" />
@@ -173,7 +160,6 @@ export default function ProductDetail() {
             </div>
           </div>
 
-          {/* SKU / CATEGORIES / TAGS */}
           <div className="text-[14px] text-[#222] space-y-[6px] mb-8">
             <p><span className="font-semibold">SKU:</span> N/A</p>
             <p>
@@ -182,7 +168,6 @@ export default function ProductDetail() {
             <p><span className="font-semibold">TAGS:</span> biker, black, bomber, leather</p>
           </div>
 
-          {/* TAB MÔ TẢ – gạch đậm dưới “MÔ TẢ SẢN PHẨM” */}
           <div className="mb-6">
             <div className="flex items-center gap-10 text-[16px] font-semibold mb-10">
               <span className="text-[#111] relative after:content-[''] after:block after:h-[4px] after:w-[150px] after:bg-[#111] after:mt-[6px]">
@@ -200,14 +185,10 @@ export default function ProductDetail() {
             </p>
           </div>
 
-          {/* ĐƯỜNG KẺ NHẸ */}
           <div className="h-[2px] bg-[#e6e6e6] my-13" />
 
-          {/* CHÍNH SÁCH – SVG giống phong cách ảnh */}
           <div className="space-y-6">
-            {/* Giao hàng */}
             <div className="flex items-start gap-4">
-              {/* xe kéo tay */}
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.8">
                 <path d="M3 5h2l2 12h11" />
                 <circle cx="9" cy="19" r="1.8" />
@@ -226,7 +207,6 @@ export default function ProductDetail() {
 
             {/* Hỗ trợ 24/7 */}
             <div className="flex items-start gap-4">
-              {/* tai nghe */}
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.8">
                 <path d="M4 13v3a3 3 0 0 0 3 3h1v-6H7a3 3 0 0 0-3 3zM20 13v3a3 3 0 0 1-3 3h-1v-6h1a3 3 0 0 1 3 3z" />
                 <path d="M6 13V9a6 6 0 0 1 12 0v4" />
@@ -239,9 +219,7 @@ export default function ProductDetail() {
               </div>
             </div>
 
-            {/* Cam kết chất lượng */}
             <div className="flex items-start gap-4">
-              {/* khiên tick */}
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.8">
                 <path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z" />
                 <path d="M9 12l2 2 4-4" />
@@ -271,7 +249,6 @@ export default function ProductDetail() {
                 <img src={item.img} alt="" className="w-full h-full object-cover" />
               </div>
 
-              {/* Dresses + trái tim cùng hàng */}
               <div className="flex items-center justify-between mt-3">
                 <p className="text-[#8d8d8d] text-[13px]">Dresses</p>
                 <button

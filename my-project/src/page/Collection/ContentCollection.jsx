@@ -25,14 +25,12 @@ const items = [
 export default function ContentCollection() {
   return (
     <section className="max-w-[1435px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      {/* Tiêu đề */}
       <h1 className="font-nct-torin font-semibold leading-tight tracking-tight text-[40px] sm:text-[52px] md:text-[64px] lg:text-[72px] mb-12">
         New Season
         <br />
         and New Trends
       </h1>
 
-      {/* Grid ảnh */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-[260px] gap-y-[200px]">
         {items.map((item, index) => (
           <article
@@ -44,7 +42,6 @@ export default function ContentCollection() {
             `}
           >
             <div className="relative w-full overflow-hidden">
-              {/* Ảnh */}
               <img
                 src={item.img}
                 alt={item.title}
@@ -52,7 +49,6 @@ export default function ContentCollection() {
                 loading="lazy"
               />
 
-              {/* Chữ dọc nằm mép ngoài bên trái */}
               <span
                 className="
                   absolute
@@ -73,7 +69,6 @@ export default function ContentCollection() {
               </span>
             </div>
 
-            {/* Text dưới ảnh */}
             <div className="mt-10">
               <h3 className="text-[18px] md:text-[20px] lg:text-[22px] font-semibold">
               {item.title}

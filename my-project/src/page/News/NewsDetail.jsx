@@ -23,7 +23,7 @@ const NewsDetail = () => {
 
   return (
     <section className="max-w-[1410px] mx-auto px-4 sm:px-6 lg:px-8 mt-[100px]">
-      {/* Tiêu đề */}
+    
       <div className="text-center mb-10">
         <h1 className="text-[28px] sm:text-[34px] font-bold uppercase mb-3">
           5 Tips To Increase Your Online Sales
@@ -33,12 +33,11 @@ const NewsDetail = () => {
         </p>
       </div>
 
-      {/* Ảnh đầu */}
       <div className="w-full aspect-[1410/550] overflow-hidden mb-10">
         <img src={imgTop} alt="Detail cover" className="w-full h-full object-cover" />
       </div>
 
-      {/* --- Nội dung sau ảnh đầu --- */}
+      
       <section className="w-full flex justify-center">
         <div
           className="
@@ -68,7 +67,6 @@ const NewsDetail = () => {
             life give they're great.
           </p>
 
-          {/* Hai cột song song */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-8">
             <div className="text-left">
               <h4 className="font-semibold mb-3">Why choose product?</h4>
@@ -89,7 +87,6 @@ const NewsDetail = () => {
             </div>
           </div>
 
-          {/* đoạn cuối */}
           <p>
             She'd years darkness days. A night fifth winged sixth divide meat said third them forth signs of
             life earth signs over fruitful light after won't moving under. Thing yielding upon seed.
@@ -97,7 +94,6 @@ const NewsDetail = () => {
         </div>
       </section>
 
-      {/* Hai ảnh giữa */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 mb-10">
         <div className="aspect-[570/650] overflow-hidden">
           <img src={imgMid1} alt="mid1" className="w-full h-full object-cover" />
@@ -107,7 +103,7 @@ const NewsDetail = () => {
         </div>
       </div>
 
-      {/* --- Nội dung sau 2 ảnh song song --- */}
+     
       <section className="w-full flex justify-center mt-10">
         <div
           className="
@@ -125,7 +121,7 @@ const NewsDetail = () => {
             She'd years darkness days. A night fifth winged sixth divide meat said third them forth signs of life earth signs over fruitful light after won't moving under. Thing yielding upon seed. Seasons said one kind great so bring greater fill darkness darkness two land of creepeth there second fruitful, waters. Make don't void years Gathering gathering divide fill.
           </p>
 
-          {/* SHARE */}
+        
           <div className="flex flex-col items-center justify-center mt-21 mb-6">
             <div className="flex items-center gap-2 text-gray-700 uppercase text-[14px] font-medium tracking-wide hover:text-black transition">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
@@ -137,7 +133,7 @@ const NewsDetail = () => {
         </div>
       </section>
 
-      {/* --- Tiếp tục mua sắm --- */}
+   
       <div className="bg-gray-50 py-16 text-center mt-16">
         <h2 className="text-[28px] font-semibold mb-8">Tiếp tục mua sắm</h2>
         <div className="flex justify-center gap-6 flex-wrap">
@@ -150,7 +146,7 @@ const NewsDetail = () => {
         </div>
       </div>
 
-      {/* --- Prev / Next --- */}
+    
       <div className="border-t border-gray-200 pt-8 mt-8">
         <div className="flex flex-col sm:flex-row justify-between gap-8">
           <Link to={`/news/${prev.id}`} className="group sm:max-w-[48%]">
@@ -179,7 +175,6 @@ const NewsDetail = () => {
         </div>
       </div>
 
-      {/* --- Bài viết liên quan --- */}
       <div className="mt-30 mb-[150px]">
         <h3 className="text-[34px] font-bold uppercase mb-10 text-center">
           Bài viết liên quan

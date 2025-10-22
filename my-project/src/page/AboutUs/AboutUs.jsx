@@ -1,11 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-// Ảnh chính
-import imgTop from "../../assets/imageC.png"; // ảnh nhà máy 1410x550
-import imgMid from "../../assets/imgN.png"; // ảnh công nhân 1200x650
-
-// Ảnh gallery nhỏ
+import imgTop from "../../assets/imageC.png"; 
+import imgMid from "../../assets/imgN.png"; 
 import imgX from "../../assets/imgx.png";
 
 
@@ -17,7 +13,6 @@ const AboutUs = () => {
         Về thương hiệu EVASHOES
       </h1>
 
-      {/* Ảnh nhà máy */}
       <div className="w-full aspect-[1410/550] overflow-hidden mb-10">
         <img
           src={imgTop}
@@ -26,7 +21,6 @@ const AboutUs = () => {
         />
       </div>
 
-      {/* Nội dung */}
       <div className="max-w-[1000px] mx-auto text-[#222] font-light leading-[28px] space-y-8">
         {/* OUR STORY */}
         <div>
@@ -83,7 +77,6 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* Ảnh công nhân */}
       <div className="w-full max-w-[1200px] mx-auto mt-16 mb-10 aspect-[1200/650] overflow-hidden">
         <img
           src={imgMid}
@@ -92,7 +85,6 @@ const AboutUs = () => {
         />
       </div>
 
-      {/* Gallery ảnh nhỏ */}
 <div className="flex justify-center gap-4 flex-wrap mt-4">
   {[imgX, imgX, imgX, imgX, imgX, imgX, imgX, imgX, imgX].map(
     (img, index) => (
@@ -112,10 +104,9 @@ const AboutUs = () => {
 
 {/* SHARE */}
 <div className="w-full mt-26">
-  {/* Icon + text */}
+ 
   <div className="flex flex-col items-center justify-center">
     <div className="flex items-center gap-2 text-gray-700 uppercase text-[14px] font-medium tracking-wide hover:text-black transition">
-      {/* Icon SHARE chuẩn ba chấm nối nhau */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="w-5 h-5"
@@ -134,12 +125,12 @@ const AboutUs = () => {
     </div>
   </div>
 
-  {/* Gạch ngang toàn trang */}
+
   <div className="border-t border-gray-200 mt-26 w-full"></div>
 
   {/* PREV / NEXT POST */}
   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-10 gap-8 text-gray-800">
-    {/* Previous Post */}
+  
     <div className="sm:w-1/2">
       <div className="flex items-center gap-2 text-gray-400 uppercase text-[13px] font-semibold tracking-wide">
         <svg
@@ -180,7 +171,6 @@ const AboutUs = () => {
     </div>
   </div>
 
-  {/* Gạch dưới cuối cùng */}
   <div className="border-t border-gray-200 mt-8"></div>
 </div>
 
