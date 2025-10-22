@@ -79,11 +79,11 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-lg mb-6 uppercase">SHOP</h4>
           <ul className="space-y-4 text-gray-300 text-[15px]">
-            <li><a href="#" className="hover:text-white">Giày Dép</a></li>
-            <li><a href="#" className="hover:text-white">Túi Xách</a></li>
-            <li><a href="#" className="hover:text-white">Sale</a></li>
-            <li><a href="#" className="hover:text-white">Collection</a></li>
-            <li><a href="#" className="hover:text-white">Tất cả sản phẩm</a></li>
+            <li><a href="/product/:id" className="hover:text-white">Giày Dép</a></li>
+            <li><a href="/comingsoon" className="hover:text-white">Túi Xách</a></li>
+            <li><a href="/comingsoon" className="hover:text-white">Sale</a></li>
+            <li><a href="/comingsoon" className="hover:text-white">Collection</a></li>
+            <li><a href="/comingsoon" className="hover:text-white">Tất cả sản phẩm</a></li>
           </ul>
         </div>
 
@@ -91,11 +91,11 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-lg mb-6 uppercase">HỖ TRỢ</h4>
           <ul className="space-y-4 text-gray-300 text-[15px]">
-            <li><a href="/notfound" className="hover:text-white">Hướng dẫn đặt hàng</a></li>
-            <li><a href="/comingsoon" className="hover:text-white">Thanh toán &amp; Giao nhận</a></li>
-            <li><a href="#" className="hover:text-white">Hướng dẫn chọn size</a></li>
-            <li><a href="#" className="hover:text-white">Quy định bảo hành</a></li>
-            <li><a href="#" className="hover:text-white">Chính sách đổi trả</a></li>
+            <li><a href="/faq" className="hover:text-white">Hướng dẫn đặt hàng</a></li>
+            <li><a href="/terms" className="hover:text-white">Thanh toán &amp; Giao nhận</a></li>
+            <li><a href="/comingsoon" className="hover:text-white">Hướng dẫn chọn size</a></li>
+            <li><a href="/notfound" className="hover:text-white">Quy định bảo hành</a></li>
+            <li><a href="/comingsoon" className="hover:text-white">Chính sách đổi trả</a></li>
           </ul>
         </div>
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Heart } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import img1 from "../../assets/img1.png";
-
 
 const products = [
   { id: 1, image: img1, category: "Dresses", name: "Cropped Faux Leather Jacket", price: "$29" },
@@ -20,18 +20,28 @@ const products = [
 
 export default function Content() {
   const [wishlist, setWishlist] = useState([]);
+  const navigate = useNavigate();
 
-  const toggleWishlist = (id) => {
+  const toggleWishlist = (id, e) => {
+    e.stopPropagation(); // Ngăn click trái tim chuyển trang
     setWishlist((prev) =>
       prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
     );
+  };
+
+  const handleProductClick = (id) => {
+    navigate(`/product/${id}`);
   };
 
   return (
     <section className="max-w-[1410px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10">
         {products.map((item) => (
-          <div key={item.id} className="group">
+          <div
+            key={item.id}
+            className="group cursor-pointer"
+            onClick={() => handleProductClick(item.id)}
+          >
             {/* Ảnh sản phẩm */}
             <div className="relative w-full aspect-[330/400] overflow-hidden rounded-sm bg-gray-100">
               <img
@@ -58,7 +68,7 @@ export default function Content() {
               <p className="text-[13px] text-gray-500">{item.category}</p>
               <button
                 aria-label="Thêm vào yêu thích"
-                onClick={() => toggleWishlist(item.id)}
+                onClick={(e) => toggleWishlist(item.id, e)}
               >
                 <Heart
                   className={`w-5 h-5 transition-colors duration-300 ${

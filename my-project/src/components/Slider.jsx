@@ -4,14 +4,13 @@ export default function Slider() {
   return (
     <section className="w-full">
       <div className="relative w-full">
-        {/* Ảnh nền full */}
+        {/* Ảnh nền */}
         <img
           src={ImageSlider}
           alt="Spring 2022: Pastel Palette"
           className="w-full h-auto object-cover 2xl:h-[650px] min-h-[360px]"
         />
 
-        {/* Nội dung chữ trong container */}
         <div className="absolute inset-0 flex items-center">
           <div className="w-full max-w-[1410px] mx-auto px-4 sm:px-8 lg:px-12 text-white">
             <div className="w-[90%] sm:w-[66%] lg:w-[50%] 2xl:w-[720px]">

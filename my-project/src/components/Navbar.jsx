@@ -8,6 +8,7 @@ import {
   RiTiktokFill,
   RiYoutubeFill,
 } from "react-icons/ri";
+import LoginDrawer from "./LoginDrawer";
 
 const navLinks = [
   { label: "HÀNG MỚI", href: "/comingsoon" },
@@ -29,7 +30,6 @@ const mobileMenuLinks = [
   { label: "#EVASHOES", href: "/comingsoon" },
 ];
 
-// Dữ liệu chi tiết panel vàng
 const submenuData = {
   "SẢN PHẨM": {
     sections: [
@@ -89,6 +89,8 @@ export default function Navbar() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
   const [isDesktop, setIsDesktop] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -108,11 +110,10 @@ export default function Navbar() {
       {/* NAVBAR */}
       <header className="fixed top-0 left-0 right-0 z-[9999] bg-white border-b border-gray-200 shadow-sm h-[100px] flex items-center">
         <div className="max-w-[1410px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
-          {/* Logo */}
+      
           <Link to="/" className="shrink-0">
             <img src={LogoImage} alt="EVASHOES" className="w-[150px] sm:w-[180px] h-auto object-contain" />
           </Link>
-
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8 lg:gap-12">
             {navLinks.map((link) => (
@@ -124,7 +125,7 @@ export default function Navbar() {
                 }`}
               >
                 {link.label}
-                <span className="pointer-events-none absolute left-0 -bottom-3 h-[6px] rounded-sm bg-[#f4c400] w-0 transition-all duration-200 group-hover:w-full" />
+                <span className="pointer-events-none absolute left-0 -bottom-3 h-[6px] rounded-sm bg-[#f4c400] w-0 group-hover:w-full" />
               </Link>
             ))}
           </nav>
@@ -134,7 +135,15 @@ export default function Navbar() {
             <button onClick={() => { setSearchOpen(!searchOpen); setMenuOpen(false); }}>
               {searchOpen ? <X className="w-5 h-5 text-[#D6001C]" /> : <Search className="w-5 h-5 hover:text-[#D6001C]" />}
             </button>
-            <User className="w-5 h-5 hover:text-[#D6001C]" />
+           <button
+              onClick={() => {
+                setLoginOpen(true);     
+                setSearchOpen(false);   
+              }}
+            >
+              <User className="w-5 h-5 hover:text-[#D6001C]" />
+            </button>
+
             <Heart className="w-5 h-5 hover:text-[#D6001C]" />
             <div className="relative">
               <ShoppingBag className="w-5 h-5 hover:text-[#D6001C]" />
@@ -175,25 +184,29 @@ export default function Navbar() {
 
       {/* MENU OVERLAY */}
       {menuOpen && (
-        <div className="fixed inset-0 z-[10000] bg-black/40 flex justify-end">
-          <aside
-            className={`absolute right-0 top-0 bg-white shadow-xl h-screen transition-transform duration-300 ${
-              isDesktop ? "w-[585px]" : "w-full"
-            }`}
-          >
-            {/* Nút đóng */}
-            <button
-              aria-label="Đóng"
-              onClick={() => { setMenuOpen(false); setActiveMenu(null); }}
-              className="absolute top-4 right-5 z-[10002] hover:opacity-80"
-            >
-              <X className="w-6 h-6" />
-            </button>
+  <div
+    className="fixed inset-0 z-[10000] bg-black/40 flex justify-end"
+    onClick={() => setMenuOpen(false)} 
+  >
+    <aside
+      className={`absolute right-0 top-0 bg-white shadow-xl h-screen transition-transform duration-300 ${
+        isDesktop ? "w-[585px]" : "w-full"
+      }`}
+      onClick={(e) => e.stopPropagation()} 
+    >
+      {/* Nút đóng */}
+      <button
+        aria-label="Đóng"
+        onClick={() => { setMenuOpen(false); setActiveMenu(null); }}
+        className="absolute top-4 right-5 z-[10002] hover:opacity-80"
+      >
+        <X className="w-6 h-6" />
+      </button>
 
             {/* Desktop: 2 panel */}
             {isDesktop ? (
               <div className="flex h-full" onMouseLeave={() => setActiveMenu(null)}>
-                {/* Cột trắng */}
+               
                 <div className="w-[276px] bg-white h-full px-8 pt-14 pb-8 flex flex-col justify-between">
                   <div className="space-y-4">
                     {mobileMenuLinks.map((link) => (
@@ -217,8 +230,7 @@ export default function Navbar() {
                     <RiYoutubeFill />
                   </div>
                 </div>
-
-                {/* Panel vàng */}
+          
                 <div
                   className={`flex-1 bg-[#f4c400] text-black transition-all duration-300 ${
                     activeMenu ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4 pointer-events-none"
@@ -301,6 +313,12 @@ export default function Navbar() {
           </aside>
         </div>
       )}
+      <LoginDrawer
+        isOpen={loginOpen}
+        onClose={() => setLoginOpen(false)}
+        onCloseSearch={() => setSearchOpen(false)} 
+      />
     </>
   );
 }
+

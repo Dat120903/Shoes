@@ -1,24 +1,43 @@
 import React from "react";
 import mapImg from "../../assets/imgM.png"; // ảnh bản đồ full ngang
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 const Contact = () => {
   return (
     <section className="w-full mt-[100px]">
-        <div className="w-full text-center py-10">
-  <h1
-    className="font-[700] text-[28px] sm:text-[32px] lg:text-[35px] uppercase tracking-[0%] leading-[100%]"
-    style={{ lineHeight: "100%" }}  
-  >
-    Liên hệ
-  </h1>
-</div>
-      {/* --- Ảnh bản đồ --- */}
+      {/* --- Tiêu đề --- */}
+      <div className="w-full py-10 px-4 sm:px-8 lg:px-[300px]">
+        <h1
+          className="font-[700] text-[26px] sm:text-[30px] lg:text-[35px] uppercase tracking-[0%] leading-[100%] text-left"
+          style={{ lineHeight: "100%" }}
+        >
+          Liên hệ
+        </h1>
+      </div>
+
+      {/* --- Ảnh bản đồ + marker --- */}
       <div className="relative w-full overflow-hidden">
         <img
           src={mapImg}
           alt="Evashoes map"
-          className="w-full h-auto object-cover"
+          className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover"
         />
+
+        {/* Các vị trí đánh dấu */}
+        {/* Marker 1 */}
+        <div className="absolute top-[28%] left-[18%] text-red-700 text-[30px] sm:text-[40px] lg:text-[50px] drop-shadow-md">
+          <FaMapMarkerAlt />
+        </div>
+
+        {/* Marker 2 */}
+        <div className="absolute top-[62%] left-[46%] text-red-700 text-[30px] sm:text-[40px] lg:text-[50px] drop-shadow-md">
+          <FaMapMarkerAlt />
+        </div>
+
+        {/* Marker 3 */}
+        <div className="absolute top-[25%] right-[18%] text-red-700 text-[30px] sm:text-[40px] lg:text-[50px] drop-shadow-md">
+          <FaMapMarkerAlt />
+        </div>
       </div>
 
       {/* --- Phần nội dung chính --- */}
@@ -26,15 +45,15 @@ const Contact = () => {
         {/* --- 2 cột: Tên công ty & thông tin --- */}
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-5 sm:gap-8 gap-10 mb-16 md:items-start">
           {/* Bên trái: Tên công ty */}
-          <div className="md:pl-[270px] text-center md:text-left flex items-start justify-center md:justify-start">
-            <h2 className="text-[20px] sm:text-[22px] lg:text-[24px] font-semibold leading-[32px]">
+          <div className="text-center md:text-left flex items-start justify-center md:justify-start md:pl-[100px] lg:pl-[270px]">
+            <h2 className="text-[18px] sm:text-[20px] lg:text-[24px] font-semibold leading-[32px]">
               Công ty Cổ phần <br /> Thời trang Evashoes
             </h2>
           </div>
 
           {/* Bên phải: Thông tin chi tiết */}
-          <div className="text-[15px] leading-[28px] text-[#222] space-y-2 sm:space-y-3 text-center md:text-left">
-            <h1 className="text-[28px] sm:text-[34px] font-bold uppercase mb-2 md:hidden">
+          <div className="text-[14px] sm:text-[15px] leading-[26px] sm:leading-[28px] text-[#222] space-y-2 sm:space-y-3 text-center md:text-left">
+            <h1 className="text-[26px] sm:text-[32px] font-bold uppercase mb-2 md:hidden">
               Liên hệ
             </h1>
             <p>
@@ -57,8 +76,8 @@ const Contact = () => {
         </div>
 
         {/* --- Form liên hệ --- */}
-        <div className="max-w-[800px] mx-auto w-full mt-10">
-          <h3 className="text-[24px] font-semibold mb-5 uppercase text-left">
+        <div className="max-w-[800px] mx-auto w-full mt-10 px-2 sm:px-0">
+          <h3 className="text-[22px] sm:text-[24px] font-semibold mb-5 uppercase text-left">
             Liên hệ với chúng tôi
           </h3>
 

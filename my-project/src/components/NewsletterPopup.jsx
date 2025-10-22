@@ -50,12 +50,12 @@ const NewsletterPopup = () => {
             <input
               type="email"
               placeholder="Your email address"
-              className="flex-grow px-4 py-3 text-[14px] outline-none placeholder:text-gray-400"
+              className="flex-grow px-6 py-3 text-[14px] outline-none placeholder:text-gray-400"
               required
             />
             <button
               type="submit"
-              className="px-6 py-3 text-[14px] font-semibold bg-black text-white hover:bg-gray-900 transition-colors"
+              className="px-6 py-3 text-[14px] font-semibold text-black hover:bg-gray-200 transition-colors"
             >
               JOIN
             </button>
