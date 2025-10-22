@@ -118,7 +118,7 @@ export default function ProductDetail() {
               <div className="uppercase text-[14px] font-semibold tracking-wide">SIZES</div>
               <a
                 href="#"
-                className="text-[13px] font-medium text-[#111] relative after:content-[''] after:block after:h-[2px] after:w-[120px] after:bg-[#111] after:mt-[6px]"
+                className="text-[11px] font-medium text-[#111] relative after:content-[''] after:block after:h-[2px] after:w-[120px] after:bg-[#111] after:mt-[6px]"
               >
                 HƯỚNG DẪN CHỌN SIZE
               </a>
