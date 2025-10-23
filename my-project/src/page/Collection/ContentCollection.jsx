@@ -77,19 +77,19 @@ export default function ContentCollection() {
             <p className="mt-2 text-[12px] md:text-[13px] font-semibold uppercase">
               <Link
                 to="/collectiondetail"
-                className="inline-flex items-baseline gap-1 cursor-pointer"
+                className="inline-flex items-baseline gap-1 cursor-pointer mb-10"
                 aria-label="Go to collection detail"
               >
                 <span className="underline decoration-black decoration-2 underline-offset-8">
                   Discover
                 </span>
                 <span>Now</span>
-              </Link>
+              </Link> 
             </p>
           </div>
           </article>
         ))}
-      </div>
+      </div>  
 
       <div className="h-20" />
     </section>

@@ -1,6 +1,7 @@
-import ImgLB from "../assets/imgLB.png"; 
-import ImgSI from "../assets/imgSI.png"; 
-import ImgTA from "../assets/imgTA.png"; 
+import { Link } from "react-router-dom";
+import ImgLB from "../assets/imgLB.png";
+import ImgSI from "../assets/imgSI.png";
+import ImgTA from "../assets/imgTA.png";
 
 export default function Paner() {
   return (
@@ -14,6 +15,7 @@ export default function Paner() {
         "
       >
         <div className="grid md:grid-cols-2 gap-4 md:h-[600px]">
+          {/* Ảnh lớn bên trái */}
           <div className="relative overflow-hidden w-full aspect-[4/3] md:aspect-auto md:h-full">
             <img
               src={ImgTA}
@@ -25,13 +27,18 @@ export default function Paner() {
               <h3 className="mt-2 font-semibold text-[18px] sm:text-[20px]">
                 THE ART OF PROSPERITY
               </h3>
-              <button className="mt-3 underline underline-offset-4 text-sm">
+              <Link
+                to="/shoplist"
+                className="mt-3 inline-block underline underline-offset-4 text-sm hover:text-[#D6001C] transition"
+              >
                 XEM BỘ SƯU TẬP
-              </button>
+              </Link>
             </div>
           </div>
 
+          {/* 3 khối nhỏ bên phải */}
           <div className="grid gap-4">
+            {/* Ảnh trên */}
             <div className="relative overflow-hidden w-full aspect-[4/3] md:aspect-auto md:h-[285px]">
               <img
                 src={ImgLB}
@@ -43,14 +50,18 @@ export default function Paner() {
                 <h3 className="mt-2 font-semibold text-[18px] sm:text-[20px]">
                   LOVE BLOOMS
                 </h3>
-                <button className="mt-3 underline underline-offset-4 text-sm">
+                <Link
+                  to="/shoplist"
+                  className="mt-3 inline-block underline underline-offset-4 text-sm hover:text-[#F4C400] transition"
+                >
                   XEM BỘ SƯU TẬP
-                </button>
+                </Link>
               </div>
             </div>
 
-        
+            {/* Ảnh dưới: chia 2 cột */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Step Into Spring */}
               <div className="relative overflow-hidden w-full aspect-[4/3] md:aspect-auto md:h-[285px]">
                 <img
                   src={ImgSI}
@@ -62,12 +73,16 @@ export default function Paner() {
                   <h3 className="mt-2 font-semibold text-[18px] sm:text-[20px]">
                     STEP INTO SPRING
                   </h3>
-                  <button className="mt-3 underline underline-offset-4 text-sm">
+                  <Link
+                    to="/shoplist"
+                    className="mt-3 inline-block underline underline-offset-4 text-sm hover:text-[#F4C400] transition"
+                  >
                     XEM BỘ SƯU TẬP
-                  </button>
+                  </Link>
                 </div>
               </div>
 
+              {/* Thẻ quà tặng */}
               <div className="relative overflow-hidden w-full aspect-[4/3] md:aspect-auto md:h-[285px] bg-[#F4C400]">
                 <div className="absolute inset-0 flex flex-col justify-center items-start px-6 sm:px-8">
                   <h3 className="font-semibold text-[18px] sm:text-[20px]">
@@ -77,9 +92,12 @@ export default function Paner() {
                     Surprise someone with the gift
                     <br /> they really want.
                   </p>
-                  <button className="mt-4 underline underline-offset-4 text-sm inline-block self-start">
+                  <Link
+                    to="/shoplist"
+                    className="mt-4 underline underline-offset-4 text-sm hover:text-white transition"
+                  >
                     XEM NGAY
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

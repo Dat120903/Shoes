@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 
 import imgTop from "../../assets/imgd1.png";
 import imgMid1 from "../../assets/imgd2.png";
-import imgMid2 from "../../assets/imgd3.png";
+import imgMid2 from "../../assets/images_2.png";
 import imgBot1 from "../../assets/imgd4.png";
 import imgBot2 from "../../assets/imgd5.png";
 import imgBot3 from "../../assets/imgd6.png";
@@ -22,9 +22,9 @@ const NewsDetail = () => {
   const next = POSTS[(idx + 1) % POSTS.length];
 
   return (
-    <section className="max-w-[1410px] mx-auto px-4 sm:px-6 lg:px-8 mt-[100px]">
+    <section className="max-w-[1410px] mx-auto px-4 sm:px-6 lg:px-8 mt-[150px]">
     
-      <div className="text-center mb-10">
+      <div className="text-left mb-10">
         <h1 className="text-[28px] sm:text-[34px] font-bold uppercase mb-3">
           5 Tips To Increase Your Online Sales
         </h1>
